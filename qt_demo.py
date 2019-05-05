@@ -49,7 +49,7 @@ class Example(QWidget):
 
     @pyqtSlot()
     def buildExamplePopup(self):
-        name = "aaa"#item.text()
+        name = "aaaa"#item.text()
         self.exPopup = examplePopup(name)
         self.exPopup.setGeometry(100, 200, 100, 100)
         self.exPopup.show()
