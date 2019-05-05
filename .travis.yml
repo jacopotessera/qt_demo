@@ -42,7 +42,7 @@ install:
   # - conda update -q conda NO !!!!  #  conda info -a  # Use this to debug conda
 
   # (b) setup conda environment
-  - echo "conda-installing python, pip, and setuptools"; conda install "python=$TRAVIS_PYTHON_VERSION" "sip=4.19.8" "pip" "setuptools" -q
+  - echo "conda-installing python, pip, and setuptools"; conda install "python=$TRAVIS_PYTHON_VERSION" "sip=4.18" "pip" "setuptools" -q
   # - echo "pip-installing sip"; pip install "sip>=4.19.3"
 
   # (c) Compile and install Qt
