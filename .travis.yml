@@ -8,7 +8,7 @@ install:
   - sudo apt-get install python3-pip python3-pyqt5
   - sudo pip3 install pyinstaller
 
-after_success:
+script:
   - pyinstaller -F qt_demo.py
 
 deploy:
