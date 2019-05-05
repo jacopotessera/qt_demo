@@ -16,7 +16,7 @@ env:
   # Note: PYQT_DIST_DIR folder should have the same name than the python package
   # - QT_VER=5.9.2 PYQT_VER=5.9 CACHE_NAME=Qt5.9.2-PyQt5.9  >> 5.9 does not work
   global:
-  - GH_REF: git@github.com:smarie/PyQt5-minimal.git
+  - GH_REF: git@github.com:jacopotessera/qt_demo.git
 
 # cache: pip
 cache:
@@ -138,13 +138,12 @@ deploy:
 
   # the release on github
   - provider: releases
-    api_key:
-      secure: "BRP10CcTXKIUgMqKaoOiVTCBNE3i/WPqw5AGzdV+7YVHYY5XpJ4a0ioJUdNqwHBarli6L5v7Z4uUwFXpl+ONQyenhBAlBoMm42eonMayDTl4bZC59hvWA82fEST99FF+m/entPJRfdLFeDU00Y6GfobKed6tQx+uqgN4a/OQGto1q3ZL7Znj3dZobOq38TfFRg9CZp+/0RAAnQr6wfFdTlC44oQZDF9UrG9xgLyNmId+A4Szv6fG10x+BQdxNgD5Kl4d8wMpqf//pJKE/IkeMiduu6ghOmsNjGPCbWwxIPjzKWJuKzr4k9wNVAJ/JOQ5g4e08C6bPHrVhnINEKZwx/0zSLMNGQ/IoguG/4sSANmkiGZJj04Jb+SgMZ4PrU1XHy9UJaytyx8PpBZ6stk25HVLhv8gCZ07uHcAeZ1QtUG4YfM03jV9qLjSg2eA2IXV8Dl7ObR9aQ6+/Lh7DABfi7WneA8d1YeROQnaPiyqlo3Vkty2R74UZKBNpTtZd2+Z7PgosIWD5A4HgjfM/Jt8fzPGw5GREz2PgvrxYJSEoFvp2bnbVew3xCYd7C6il7E61UQ5EPA1+m+sFmfcXeGwFtcQ1s1swIpUXVmvBhhS0EKttlLHgcBGdH03V7fXBef7k9CJGLdiEuJBaMHhFdlGYbFiRuLBjgkjNbjQ77TVveU="
+    api_key: $GITHUB_TOKEN
     file_glob: true
     file:
       - dist/*
-    # on:
-    #   repo: smarie/PyQt5-minimal
+    on:
+       repo: jacopotessera/qt_demo
     skip_cleanup: true
     on:
       tags: true
